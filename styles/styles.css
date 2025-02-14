@@ -1,0 +1,126 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;  /* Dark background */
+    color: #fff;  /* White text color */
+    height: 100vh;
+    background-image: url('../image/image.png');  /* Background image */
+    background-size: cover;
+    background-position: center center;  /* Ensure image is fully centered */
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* Logo styles */
+nav .logo {
+    width: 150px;  /* Increased size for the logo */
+    height: 150px;  /* Adjust the height as needed */
+    border-radius: 50%;  /* Optional: makes the logo circular */
+    background-image: url('../image/image.png');  /* Same image as the background */
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Scrollable Team Cards */
+.team-section {
+    padding: 4rem; /* Larger padding for the team section */
+    text-align: center;
+    margin-top: 650px;
+}
+
+.team-section h1 {
+    font-size: 4rem;  /* Adjust this value for your desired size */
+    margin-bottom: 2rem;  /* Space between title and cards */
+    color: #fff;  /* Make sure the text color is white */
+}
+
+
+.team-cards {
+    display: flex;
+    gap: 4rem; /* Increased gap for bigger cards */
+    overflow-x: auto;
+    padding: 2rem;
+    scroll-snap-type: x mandatory;
+}
+
+.team-card {
+    background-color: rgba(68, 68, 68, 0.6);  /* Dimmed background */
+    border-radius: 15px;
+    width: calc(33.33% - 4rem);
+    padding: 3rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    scroll-snap-align: start;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Adds space at the top to lower the card */
+}
+
+.team-card:hover {
+    background-color: rgba(68, 68, 68, 0.9);  /* Darker background on hover */
+    transform: translateY(-20px);  /* Slight lift effect on hover */
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px; /* Increased height */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.team-card h3 {
+    font-size: 2.5rem; /* Larger title size */
+    margin: 1.5rem 0;
+}
+
+.team-card p {
+    font-size: 1.6rem; /* Larger description font */
+    color: #ff6347;  /* Bright color for designation */
+}
+
+/* Scrollbar styling */
+.team-cards::-webkit-scrollbar {
+    height: 15px;
+}
+
+.team-cards::-webkit-scrollbar-thumb {
+    background-color: #ff6347;
+    border-radius: 15px;
+}
+
+.team-cards::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 4rem; /* Increased margin */
+}
+
+.pagination-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 2rem 3rem; /* Larger padding for the button */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0 2rem;
+    font-size: 2rem; /* Larger font size */
+}
+
+.pagination-btn:hover {
+    background-color: #ff4500;
+}
